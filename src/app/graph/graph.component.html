@@ -1,0 +1,178 @@
+<!-- <p>graph component works!</p> -->
+
+<!-- <header>
+    <div class="container-fluid d-flex header-subsite" id="smu-menu-explore">
+        <div class="col">
+            
+            <a class="smu-branding__link" href="https://www.smu.edu">
+                <span class="smu-branding-icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288.74 84.56">
+                        <defs>
+                            <style>
+                                .cls-blue-type {
+                                fill: #354ca1;
+                                }
+                            </style>
+                        </defs>
+                        <g id="Layer_2" data-name="Layer 2">
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <path class="cls-blue-type" d="M288.74,77.45a5.05,5.05,0,1,1-5.05-5A5,5,0,0,1,288.74,77.45Zm-.82,0a4.24,4.24,0,1,0-4.24,4.37A4.23,4.23,0,0,0,287.92,77.45Zm-5.29,3h-.81v-6h2.31c1.34,0,1.94.59,1.94,1.66a1.63,1.63,0,0,1-1.39,1.68l1.68,2.66h-.93L283.8,77.8h-1.16v2.66Zm.94-3.35c.78,0,1.66,0,1.66-1,0-.84-.68-1-1.31-1h-1.3v2h.95Z"></path>
+                                <path class="cls-blue-type" d="M89,70.76Z"></path>
+                                <path class="cls-blue-type" d="M272.53,1.63H255.16v7s4.17,1.24,4.28,5.1V46.45c0,11.41-4.31,18.78-16.2,18.78-11.53,0-17.47-7.13-17.47-18.78V15.34l0,0c0-6.28,4.41-6.78,4.41-6.78V1.64H201.51v7s4.18,1.25,4.28,5.11h0V47.75c0,20.92,13.31,36,37.44,36,24.48,0,36.17-16.64,36.17-36V14.12c.55-4.94,4.34-5.54,4.34-5.54V1.64H272.53"></path>
+                                <path class="cls-blue-type" d="M190.05,1.64h-21.6L139.73,29.4,111,1.64H89.41v7s3.92.55,4.37,5.76V69.08c0,5.88-4.45,6.12-4.45,6.12v7.27H118.1V75.21h0c-.09,0-3.81,0-4.34-5V33.53l26,25,26-25V70.24c-.53,4.93-4.25,5-4.34,5h0v7.26h28.77V75.19s-4.45-.24-4.45-6.12V14.37c.44-5.21,4.37-5.76,4.37-5.76v-7"></path>
+                                <path d="M38.71,0c-3.54,0-9.14.23-12.18.6C14,2.12,0,9.63,0,25.33,0,36.5,5,43.63,17.3,46.67c14,3.46,26.31,3.46,32.94,4.61S58.31,56,58,59.5,53.43,65.19,50,66a76.4,76.4,0,0,1-12.13.92,55.31,55.31,0,0,1-11.4-1.11,18.45,18.45,0,0,1-12.29-9.44l-12.71.11.1,25.75h7A3.77,3.77,0,0,1,12,79.4a5.28,5.28,0,0,1,1.52.25c6.45,2.76,16.74,4.63,23.33,4.85q1.88.06,3.66.06c8.73,0,18.26-1.21,24.75-5.16S76.9,69.19,77.76,58.93c.93-11.11-6-22.31-22-25.28-13.8-2.56-21.43-2.56-26.7-3.4s-9.45-2.94-9.6-6.07c-.13-3,3.25-5,7.19-6.06a60.66,60.66,0,0,1,13.55-1.45,55.7,55.7,0,0,1,12.63,1.45,20.33,20.33,0,0,1,9.71,5.57c.42,0,11.35-.24,11.35-.24V1.59h-6S67.22,3.3,64.56,3.3a7.76,7.76,0,0,1-1.12-.09A102.28,102.28,0,0,0,38.71,0" class="cls-blue-type"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </span>
+                <span class="smu-branding-text sr-only">SMU</span>
+            </a>
+        </div>
+        <div class="col d-flex justify-content-end">
+            <a id="explore-smu-label" class="header__smu-link js-toggle-class" role="button" aria-controls="smu-menu-explore-expanded" 
+                aria-expanded="false" data-t-class="js-header-explore-open" data-t-selector="body" data-t-toggle-text="Close Menu" href="#">Explore SMU
+            </a>
+        </div>
+    </div>
+
+</header> -->
+<div class="row"> <br> <br> </div>
+<div class="row"> 
+    
+    <div class="container" style="background-color: #eee;">
+        <div class="row col-md-1"> 
+            <br><br>
+        </div>
+        <!-- ------------------------------------------------------------ Question 1 ------------------------------------------------------------------ -->
+        <div *ngIf= "questionNo == 1" class="row col-md-12">
+            <div class="col-md-4">
+                <label class="col-md-3" for="dropdown">Department:</label>
+                <select id="dropdown" class="col-sm-8">
+                    <option value="cs">Computer Science</option>
+                    
+                </select>
+            
+            </div>
+            <div class="col-md-4">
+                <label class="col-md-3" for="dropdown">Faculty:</label>
+                <select id="dropdown" [(ngModel)] = "selectedValue" class="col-md-8">
+                    <option>Select Faculty</option>
+                    <option value="Theodore Manikas">Theodore Manikas</option>
+                    <option value="Labiba Jahan">Labiba Jahan</option>
+                    <option value="Eric Larson">Eric Larson</option>
+                    <option value="Ginger Alford">Ginger Alford</option>
+                    <option value="Jia Zhang">Jia Zhang</option>
+                    <option value="Jeff Tian">Jeff Tian</option>
+                    <option value="Kasilingam Periyasamy">Kasilingam Periyasamy</option>
+                    <option value="Klyne Smith">Klyne Smith</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <div class="col-md-3"></div>
+                <button type="submit" class="col-md-4" class="btn btn-primary" (click) = "renderGraph(27)">Submit</button>
+            </div>
+        </div>
+    
+        <!-- ------------------------------------------------------------ Question 2 ------------------------------------------------------------------ -->
+        <div *ngIf= "questionNo == 2" class="row col-md-12">
+            <div class="col-md-4">
+                <label class="col-md-3" for="dropdown">Department:</label>
+                <select id="dropdown" class="col-sm-8">
+                    <option value="cs">Computer Science</option>
+                </select>
+            
+            </div>
+            <div class="col-md-4">
+                <label class="col-md-4" for="dropdown">Research Areas:</label>
+                <select id="dropdown" [(ngModel)] = "selectedResearchArea" class="col-md-8">
+                    <option>Select Research Area</option>
+                    <option value="Machine Learning">Machine Learning</option>
+                    <option value="Natural Language Processing">Natural Language Processing</option>
+                    <option value="Narrative Understanding">Narrative Understanding</option>
+                    <option value="AI and Software Engineering">AI and Software Engineering</option>
+                    <option value="Software Maintenance and Evolution">Software Maintenance and Evolution</option>
+                    <option value="Data Mining">Data Mining</option>
+                    <option value="Artificial Intelligence">Artificial Intelligence</option>
+                    <option value="Database Systems">Database Systems</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <div class="col-md-3"></div>
+                <button type="submit" class="col-md-4" class="btn btn-primary" (click) = "renderGraph(27)">Submit</button>
+            </div>
+           
+        </div>
+    
+        <!-- ------------------------------------------------------------ Question 5 ------------------------------------------------------------------ -->
+        <div *ngIf= "questionNo == 5" class="row col-md-12">
+            <div class="col-md-3">
+                <label class="col-md-5" for="dropdown">Department:</label>
+                <select id="dropdown" class="col-sm-7">
+                    <option value="cs">Computer Science</option>
+                </select>
+            
+            </div>
+            <div class="col-md-3">
+                <label class="col-md-5" for="dropdown">Research Area 1:</label>
+                <select id="dropdown" class="col-md-7" [(ngModel)] = "selectedResearchArea">
+                    <option>Select Research Area</option>
+                    <option value="Data Mining">Data Mining</option>
+                </select>
+            </div>
+            AND
+            <div class="col-md-3">
+                <label class="col-md-5" for="dropdown">Research Area 2:</label>
+                <select id="dropdown" class="col-sm-7">
+                    <option>Select Research Area</option>
+                    <option value="Machine Learning">Machine Learning</option>
+                </select>
+            
+            </div>
+            <div class="col-md-2">
+                <div class="col-md-1"></div>
+                <button type="submit" class="col-md-4" class="btn btn-primary" (click) = "renderData()">Submit</button>
+            </div>
+           
+        </div>
+    
+        <div class="row"> <br> </div>
+        <div class="row">
+            <div class="col-md-12">    
+                <label for="exampleText" class="form-label">Query</label>
+                <textarea type="text" class="form-control" id="exampleText" [value] = "query" readonly> {{query}} </textarea>
+            </div> 
+        </div>
+    
+        <div class="row"> <br> <br> </div>
+       
+        <div class="row" style="border: 10px solid white; height: 1000px;">
+            <div class="col-md-4">
+                <div class="p-4" style="height: 500px; height: 500px; border: 1px solid white">
+                    <div *ngIf = "arrList.length > 0; else elseBlock" class="col-md-12" >
+                        <h3>Information</h3>
+                        <div class="form-control mb-4 px-0" *ngFor = "let item of arrList; let i = index"> {{item}}</div>
+                    </div>
+                    <ng-template #elseBlock>
+                        <h3>No other Information</h3>
+                    </ng-template>
+                </div>
+              </div>
+           
+            <div  class="col-md-8 p-4">
+                <div *ngIf = "nodes.length > 0 && edges.length > 0;" id="graph-container" class="p-4">
+                    <!-- This is where the graph will be rendered  -->
+                </div>
+                <div *ngIf = "noGraphMsg != ''">
+                    <h3> {{ noGraphMsg }} </h3>
+                </div>
+            </div>
+            <br> <br>
+        </div>
+        
+    </div> 
+</div>
+
+
+
+
+
